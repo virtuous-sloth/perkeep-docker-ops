@@ -9,5 +9,5 @@ RUN mkdir -p /keep/log    && ln -sf /keep/log    log
 # These commands should work and not fail even when
 # there is persisted data in /keep
 
-# Let's start a shell for now
-CMD /bin/bash
+# Start perkeep daemon with redirects to log files
+CMD perkeepd 1> log/stdout 2> log/stderr
